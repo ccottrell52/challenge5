@@ -1,7 +1,6 @@
 // Timer
 setInterval(() => { $('#currentDay').text(moment().format('MMMM Do YYYY, H:mm:ss a'));});
-// End Timer
-// Code for Storing in Local Storage
+
 init();
 function init() {
     $('#9a').val(localStorage.getItem('9AM', $('#9a').val()));
@@ -26,8 +25,7 @@ $('.saveBtn').on("click", function() {
     $('#5p').val(localStorage.setItem('5PM', $('#5p').val()));
     init();
 })
-// End Local Storage Code
-// Code for Color Changer
+
 timeChanger9();
 function timeChanger9 () {
     today = moment();
@@ -163,4 +161,3 @@ function timeChanger5 () {
     } else if (hourNumber < timeNum) {
         curHour.removeClass('past');
         curHour.addClass('future');}}
-// End of Code for Color Changer
